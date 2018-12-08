@@ -10,10 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_08_194420) do
+ActiveRecord::Schema.define(version: 2018_12_08_200120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "clientes", force: :cascade do |t|
+    t.string "rfc"
+    t.string "nombre_cliente"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ordenes", force: :cascade do |t|
+    t.integer "cliente_id"
+    t.integer "producto_id"
+    t.integer "numero_orden"
+    t.date "fecha"
+    t.integer "cantidad"
+    t.float "precio_venta"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "productos", force: :cascade do |t|
     t.string "nombre_producto"
@@ -22,4 +40,6 @@ ActiveRecord::Schema.define(version: 2018_12_08_194420) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "ordenes", "clientes"
+  add_foreign_key "ordenes", "productos"
 end

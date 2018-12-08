@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cliente_id: 1
+  producto_id: 1
+  numero_orden: 1
+  fecha: 2018-12-08
+  cantidad: 1
+  precio_venta: 1.5
+
+two:
+  cliente_id: 1
+  producto_id: 1
+  numero_orden: 1
+  fecha: 2018-12-08
+  cantidad: 1
+  precio_venta: 1.5

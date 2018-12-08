@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rfc: MyString
+  nombre_cliente: MyString
+
+two:
+  rfc: MyString
+  nombre_cliente: MyString
